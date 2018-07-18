@@ -2,6 +2,8 @@ JSMpeg.Player = (function(){ "use strict";
 
 var Player = function(url, options) {
 	this.options = options || {};
+  this.onload = options.onload || null;
+  this.loaded = false;
 
 	if (options.source) {
 		this.source = new options.source(url, options);
@@ -151,6 +153,14 @@ Player.prototype.update = function() {
 		}
 		return;
 	}
+
+	if (!this.loaded) {
+    this.loaded = true;
+
+    if (typeof this.onload === 'function') {
+      this.onload(this);
+    }
+  }
 
 	if (!this.isPlaying) {
 		this.isPlaying = true;
