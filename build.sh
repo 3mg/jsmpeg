@@ -1,5 +1,6 @@
 #!/bin/sh
-uglifyjs \
+
+cat \
 	src/jsmpeg.js \
 	src/video-element.js \
 	src/player.js \
@@ -14,4 +15,8 @@ uglifyjs \
 	src/webgl.js \
 	src/canvas2d.js \
 	src/webaudio.js \
-	-o jsmpeg.min.js
+	> index.js
+
+echo "\ntypeof module !== 'undefined' && (module.exports = JSMpeg);\n" >> index.js
+
+uglifyjs index.js -o jsmpeg.min.js

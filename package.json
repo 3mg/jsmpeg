@@ -1,0 +1,23 @@
+{
+  "name": "jsmpeg",
+  "version": "1.0.0",
+  "description": "An MPEG1 Video Decoder in JavaScript. Phoboslab/jsmpeg fork.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/3mg/jsmpeg.git"
+  },
+  "keywords": [
+    "mpeg",
+    "decoder"
+  ],
+  "author": "Nickolay Savchenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/3mg/jsmpeg/issues"
+  },
+  "homepage": "https://github.com/3mg/jsmpeg#readme"
+}
